@@ -1,0 +1,26 @@
+enum tl {            //tl = Traffic Light
+    red,
+    yellow,
+    green
+}
+
+public class AB
+{
+    public static void main(String args[])
+    {
+        tl light = tl.red;                               // enum object
+        System.out.println("Light is "+light);
+        
+        switch(light)
+        {
+            case red:
+                System.out.println("Stop!!!");
+                break;
+            case yellow:
+                System.out.println("Get Ready to stop");
+                break;
+            case green:
+                System.out.println("Gooooo");
+        }
+    }
+}
