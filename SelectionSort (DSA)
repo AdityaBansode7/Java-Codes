@@ -1,0 +1,32 @@
+public class SelectionSort{
+    public static void PArray(int arr[])
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]);
+        }
+    }
+    public static void main(String... args)
+    {
+        int arr[] = {8,1,5,9,3,6,4};
+        for(int i=0;i<arr.length;i++)
+        {
+            int smallestElement = i;
+
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[smallestElement] > arr[j])
+                {
+                    smallestElement = j;
+                }
+            }
+            if(arr[i] > arr[smallestElement])
+            {
+                int temp = arr[smallestElement];
+                arr[smallestElement] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        PArray(arr);
+    }
+}
